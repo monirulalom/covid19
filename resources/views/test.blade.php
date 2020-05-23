@@ -148,6 +148,8 @@
                         console.log(data);
                         $('select[name="district"]').empty();
                         $('select[name="district"]').append('<option>Select district</option>');
+                        $('select[name="upazilla"]').empty();
+                        $('select[name="upazilla"]').append('<option>Select upazilla</option>');
                         $.each(data, function (key, value) {
                             $('select[name="district"]').append('<option value="' + key + '">' + value + '</option>');
                         });
