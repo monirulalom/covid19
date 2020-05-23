@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name') }} {{ app()->version() }}</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -27,20 +27,20 @@
 
 
                     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                        data-target="navbarBasicExample">
+                        data-target="menu">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
                 </div>
 
-                <div id="navbarBasicExample" class="navbar-menu">
+                <div id="menu" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="{{url('/')}}">
                             Home
                         </a>
 
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="{{url('/test-request')}}">
                             Request for Test
                         </a>
                         <a class="navbar-item">
@@ -62,7 +62,7 @@
                                 <hr class="navbar-divider">
                                 <a class="navbar-item">
                                     Report an issue
-                                </a>~
+                                </a>
                             </div>
                         </div>
                     </div>

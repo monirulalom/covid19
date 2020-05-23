@@ -24,7 +24,7 @@
 
 
 
-
+require('./bootstrap');
 
 require('./navbar');
 //require('./bulma-extensions');
