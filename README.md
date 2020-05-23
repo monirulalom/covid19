@@ -51,8 +51,8 @@ This a project for managing covid19 situation using laravel frameork.
 ### Contributors
 **Team Lead** 
 
- [Md. Monirul Alom](https://monirulalom.com/) - @monirulalom
+ [Md. Monirul Alom](https://monirulalom.com/) - [@monirulalom](https://github.com/monirulalom)
 
 **Member** 
 
-Md. Jahangir Alam - @alam252
+Md. Jahangir Alam - [@alam252](https://github.com/alam252)
