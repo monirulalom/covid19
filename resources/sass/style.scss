@@ -1,0 +1,7 @@
+.site-title{
+    margin: 10px;
+}
+
+a.navbar-item.is-active:not(:focus):not(:hover), .navbar-link.is-active:not(:focus):not(:hover){
+    background-color: #fafafa;
+}

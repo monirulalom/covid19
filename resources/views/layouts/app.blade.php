@@ -40,8 +40,8 @@
                             Home
                         </a>
 
-                        <a class="navbar-item" href="{{url('/test-request')}}">
-                            Request for Test
+                        <a class="navbar-item {{request()->routeIs('apply')?'is-active':''}}" href="{{url('/apply')}}">
+                            Apply for Test
                         </a>
                         <a class="navbar-item">
                             Awareness Quiz
@@ -109,6 +109,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    @yield('footer-script');
 </body>
 
 </html>
