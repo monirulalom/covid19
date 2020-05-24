@@ -18082,3 +18082,7 @@ a.navbar-item.is-active:not(:focus):not(:hover),
   background-color: #fafafa;
 }
 
+.mt15 {
+  margin-top: 15px;
+}
+

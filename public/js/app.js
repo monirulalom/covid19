@@ -30254,6 +30254,16 @@ $(document).ready(function () {
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
     $(".navbar-burger").toggleClass("is-active");
     $(".navbar-menu").toggleClass("is-active");
+  }); // close notification
+  // (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+  //   $notification = $delete.parentNode;
+  //   $delete.addEventListener('click', () => {
+  //     $notification.parentNode.removeChild($notification);
+  //   });
+  // });
+
+  $(".notification .delete").click(function () {
+    $(this).parent().remove();
   });
 });
 

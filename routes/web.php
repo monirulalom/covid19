@@ -12,13 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-URL::forceScheme('https');
+
 Route::get('/', function () {
     return view('index');
 });
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('dashnoard');
+Route::get('/home', 'HomeController@index')->name('dashboard');
 
 Route::get('apply','TestRequestController@index')->name('apply');
 
