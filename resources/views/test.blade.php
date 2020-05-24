@@ -9,6 +9,7 @@
             </header>
 
             <form action="">
+                @csrf
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control">
@@ -81,35 +82,50 @@
 
                 </div>
 
-
+                
                 <div class="field">
-                    <label class="label">Message</label>
+                    <label class="label">Do you have got in contact with someone corona positive ? </label>
                     <div class="control">
-                        <textarea class="textarea" placeholder="Textarea"></textarea>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <div class="control">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <div class="control">
-                        <label class="radio">
-                            <input type="radio" name="question">
+                        <label class="radio" for="contact">
+                            <input type="radio" name="contact" id="yes">
                             Yes
                         </label>
                         <label class="radio">
-                            <input type="radio" name="question">
+                            <input type="radio" name="contact" id="no">
                             No
                         </label>
                     </div>
                 </div>
+
+                <div class="field">
+                    <label class="label">Do you have fever ? </label>
+                    <div class="control">
+                        <label class="radio" for="fever">
+                            <input type="radio" name="fever" id="yes">
+                            Yes
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="fever" id="no">
+                            No
+                        </label>
+                    </div>
+                </div>
+                
+
+                <div class="field">
+                    <label class="label">Do you have cough ? </label>
+                    <div class="control">
+                        <label class="radio" for="cough">
+                            <input type="radio" name="cough" id="yes">
+                            Yes
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="cough" id="no">
+                            No
+                        </label>
+                    </div>
+                </div>                                
+
 
                 <div class="field is-grouped">
                     <div class="control">
