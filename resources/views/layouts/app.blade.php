@@ -110,7 +110,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 
-    @yield('footer-script');
+    @yield('footer-script')
 </body>
 
 </html>
