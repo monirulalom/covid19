@@ -5,7 +5,7 @@
     <div class="columns is-marginless is-centered section">
         <div class="column is-8">
 
-            <h2 class="title">Test Request</h2>
+            <h2 class="title">Apply for Covid19 Test</h2>
             </header>
 
             <form action="">
@@ -84,7 +84,7 @@
 
                 
                 <div class="field">
-                    <label class="label">Do you have got in contact with someone corona positive ? </label>
+                    <label class="label">Have you got in contact with someone corona positive ? </label>
                     <div class="control">
                         <label class="radio" for="contact">
                             <input type="radio" name="contact" id="yes">
