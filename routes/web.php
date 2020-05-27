@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-URL::forceScheme('https');
+//URL::forceScheme('https');
 
 Route::get('/', function () {
     return view('index');
