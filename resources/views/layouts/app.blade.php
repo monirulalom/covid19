@@ -85,7 +85,7 @@
                                 </div>
                                 @else
                                 <div class="navbar-item has-dropdown is-hoverable">
-                                    <a class="navbar-link" href="#">{{ Auth::user()->name }}</a>
+                                    <a class="navbar-link" href="{{route('dashboard')}}">{{ Auth::user()->name }}</a>
 
                                     <div class="navbar-dropdown">
                                         <a class="navbar-item" href="{{ route('logout') }}"

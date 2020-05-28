@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('dashboard');
+Route::get('/admin', 'HomeController@index')->name('dashboard');
 
 Route::get('apply','TestRequestController@index')->name('apply');
 

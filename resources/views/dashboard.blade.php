@@ -1,21 +1,20 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-    <div class="container">
-        <div class="columns is-marginless is-centered">
-            <div class="column is-7">
-                <nav class="card">
-                    <header class="card-header">
-                        <p class="card-header-title">
-                            Dashboard
-                        </p>
-                    </header>
-
-                    <div class="card-content">
-                        You are logged in!
-                    </div>
-                </nav>
+<main class="column">
+    <div class="level">
+        <div class="level-left">
+            <div class="level-item">
+                <div class="title">Dashboard</div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <button type="button" class="button is-small">
+                    {{Carbon\Carbon::now()->isoFormat('DD MMMM YYYY')}}
+                </button>
             </div>
         </div>
     </div>
+</main>
 @endsection
