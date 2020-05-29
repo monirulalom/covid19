@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestRequestReceived;
 
 use DB;
 
@@ -49,6 +51,7 @@ class TestRequestController extends Controller
         ]);
 
         \App\TestRequest::create($request->all());
+        Mail::to($request->email)->send(new TestRequestReceived());
 
         return redirect('/apply')->with('status', 'Request Submitted');
 
