@@ -32,4 +32,26 @@ class TestRequestController extends Controller
 
     }
 
+
+
+    public function store(Request $request)
+    {
+
+        $validatedData = $request->validate([
+            'name' => 'required|min:3',
+            'email' => 'required|email',
+            'division' => 'required|integer',
+            'district' => 'required|integer',
+            'upazilla' => 'required|integer',
+            'contact' => 'required',
+            'fever' => 'required',
+            'cough' => 'required',
+        ]);
+
+        \App\TestRequest::create($request->all());
+
+        return redirect('/apply')->with('status', 'Request Submitted');
+
+    }
+
 }

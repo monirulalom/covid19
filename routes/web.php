@@ -24,6 +24,8 @@ Route::get('/admin', 'HomeController@index')->name('dashboard');
 
 Route::get('apply','TestRequestController@index')->name('apply');
 
+Route::post('apply','TestRequestController@store')->name('apply');
+
 Route::get('getdistricts/{id}','TestRequestController@getDistricts');
 
 Route::get('getupazillas/{id}','TestRequestController@getUpazillas');

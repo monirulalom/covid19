@@ -15,6 +15,14 @@ class CreateTestRequestsTable extends Migration
     {
         Schema::create('test_requests', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('division');
+            $table->string('district');
+            $table->string('upazilla');
+            $table->string('contact');
+            $table->string('fever');
+            $table->string('cough');
             $table->timestamps();
         });
     }

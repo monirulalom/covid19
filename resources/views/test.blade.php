@@ -4,24 +4,46 @@
 <div class="container">
     <div class="columns is-marginless is-centered section">
         <div class="column is-8">
+            @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+            @endif
 
             <h2 class="title">Apply for Covid19 Test</h2>
             </header>
 
-            <form action="">
+
+            <div class="field">
+                @if ($errors->first('division') || $errors->first('district') || $errors->first('upazilla'))
+                <p class="help is-danger">Location imfo is not complete</p>
+                @endif
+            </div>
+
+            <form action="{{route('apply')}}" method="POST">
                 @csrf
                 <div class="field">
                     <label class="label">Name</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Enter your name here" name="name">
+                    <div class="control has-icons-right">
+                        <input class="input  @error('email')is-danger @enderror" type="text"
+                            placeholder="Enter your name here" name="name" required>
+                        @error('name')
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                        @enderror
                     </div>
+                    @error('name')
+                    <p class="help is-danger">{{ $message }}</p>
+                    @enderror
+
                 </div>
 
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control has-icons-left has-icons-right">
                         <input class="input @error('email')is-danger @enderror" type="email"
-                            placeholder="Enter your email here">
+                            placeholder="Enter your email here" name="email">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -32,7 +54,7 @@
                         @enderror
                     </div>
                     @error('email')
-                    <p class="help is-danger">This email is invalid</p>
+                    <p class="help is-danger">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="columns">
@@ -82,16 +104,18 @@
 
                 </div>
 
-                
+
+
+
                 <div class="field">
                     <label class="label">Have you got in contact with someone corona positive ? </label>
                     <div class="control">
                         <label class="radio" for="contact">
-                            <input type="radio" name="contact" id="yes">
+                            <input type="radio" name="contact" id="yes" value="yes">
                             Yes
                         </label>
                         <label class="radio">
-                            <input type="radio" name="contact" id="no">
+                            <input type="radio" name="contact" id="no" value="no">
                             No
                         </label>
                     </div>
@@ -101,30 +125,30 @@
                     <label class="label">Do you have fever ? </label>
                     <div class="control">
                         <label class="radio" for="fever">
-                            <input type="radio" name="fever" id="yes">
+                            <input type="radio" name="fever" id="yes" value="yes">
                             Yes
                         </label>
                         <label class="radio">
-                            <input type="radio" name="fever" id="no">
+                            <input type="radio" name="fever" id="no" value="no">
                             No
                         </label>
                     </div>
                 </div>
-                
+
 
                 <div class="field">
                     <label class="label">Do you have cough ? </label>
                     <div class="control">
                         <label class="radio" for="cough">
-                            <input type="radio" name="cough" id="yes">
+                            <input type="radio" name="cough" id="yes" value="yes">
                             Yes
                         </label>
                         <label class="radio">
-                            <input type="radio" name="cough" id="no">
+                            <input type="radio" name="cough" id="no" value="no">
                             No
                         </label>
                     </div>
-                </div>                                
+                </div>
 
 
                 <div class="field is-grouped">
