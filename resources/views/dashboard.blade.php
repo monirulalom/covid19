@@ -16,5 +16,30 @@
             </div>
         </div>
     </div>
+
+    <table class="table is-fullwidth is-bordered is-hoverable">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Location</th>
+            <th>Contact</th>
+            <th>Fever</th>
+            <th>Cough</th>
+        </thead>
+        <tbody>
+            @foreach ($reqs as $req)
+            <tr>
+                <td>{{$req->id}}</td>
+                <td>{{$req->name}}</td>
+                <td>{{$req->email}}</td>
+                <td>{{$req->division}},{{$req->district}},{{$req->upazilla}}</td>
+                <td>{{$req->contact}}</td>
+                <td>{{$req->fever}}</td>
+                <td>{{$req->cough}}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </main>
 @endsection
