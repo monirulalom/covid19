@@ -12,4 +12,10 @@ class Division extends Model
     public function district(){
         return $this->hasMany('App\District');
     }
+
+    
+    public function districts(){
+        return $this->belongsToMany('App\Application','application_location');
+    }
 }
+

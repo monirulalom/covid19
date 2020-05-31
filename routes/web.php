@@ -22,10 +22,10 @@ Auth::routes(['verify' => true]);
 
 Route::get('/admin', 'HomeController@index')->name('dashboard');
 
-Route::get('apply','TestRequestController@index')->name('apply');
+Route::get('apply','ApplicationController@index')->name('apply');
 
-Route::post('apply','TestRequestController@store')->name('apply');
+Route::post('apply','ApplicationController@store')->name('apply');
 
-Route::get('getdistricts/{id}','TestRequestController@getDistricts');
+Route::get('getdistricts/{id}','ApplicationController@getDistricts');
 
-Route::get('getupazillas/{id}','TestRequestController@getUpazillas');
+Route::get('getupazillas/{id}','ApplicationController@getUpazillas');

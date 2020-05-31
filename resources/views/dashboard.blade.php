@@ -33,7 +33,7 @@
                 <td>{{$req->id}}</td>
                 <td>{{$req->name}}</td>
                 <td>{{$req->email}}</td>
-                <td>{{$req->division}},{{$req->district}},{{$req->upazilla}}</td>
+                <td>{{$req->divisions->first()->name}}, {{$req->districts->first()->name}}, {{$req->upazillas->first()->name}}</td>
                 <td>{{$req->contact}}</td>
                 <td>{{$req->fever}}</td>
                 <td>{{$req->cough}}</td>

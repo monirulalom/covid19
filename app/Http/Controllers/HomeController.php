@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TestRequest;
+use App\Application;
 
 class HomeController extends Controller
 {
@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $reqs = TestRequest::all();
+        $reqs = Application::all();
         return view('dashboard',compact('reqs'));
     }
 }

@@ -17,7 +17,7 @@ $(document).ready(function () {
   //     $notification.parentNode.removeChild($notification);
   //   });
   // });
-  $(".notification .delete").click(function(){
+  $(".notification .delete").click(function () {
     $(this).parent().remove();
   });
 
