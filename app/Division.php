@@ -14,8 +14,9 @@ class Division extends Model
     }
 
     
-    public function districts(){
+    public function applications(){
         return $this->belongsToMany('App\Application','application_location');
     }
+
 }
 

@@ -65,7 +65,7 @@ class ApplicationController extends Controller
         
         $application->save();
 
-        $application->divisions()->attach($request->division,['district_id' => $request->district, 'upazilla_id' => $request->upazilla]);
+        $application->division()->attach($request->division,['district_id' => $request->district, 'upazilla_id' => $request->upazilla]);
 
         Mail::to($request->email)->send(new ApplicationReceived());
 

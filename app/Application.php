@@ -9,15 +9,15 @@ class Application extends Model
     //
     protected $guarded= [];
 
-    function divisions(){
+    function division(){
         return $this->belongsToMany('\App\Division','application_location');
     
     }
-    function districts(){
+    function district(){
         return $this->belongsToMany('\App\District','application_location');
     
     }
-    function upazillas(){
+    function upazilla(){
         return $this->belongsToMany('\App\Upazilla','application_location');
     
     }

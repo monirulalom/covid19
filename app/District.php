@@ -18,4 +18,8 @@ class District extends Model
     function districts(){
         return $this->belongsToMany('\App\Application','application_location');
     }
+
+    public function applications(){
+        return $this->belongsToMany('App\Application','application_location');
+    }
 }

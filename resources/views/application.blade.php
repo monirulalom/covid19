@@ -5,8 +5,9 @@
     <div class="columns is-marginless is-centered section">
         <div class="column is-8">
             @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status') }}
+            <div class="notification is-primary is-light">
+                <button class="delete"></button>
+                <p> {{ session('status') }}</p>
             </div>
             @endif
 
@@ -14,11 +15,7 @@
             </header>
 
 
-            <div class="field">
-                @if ($errors->first('division') || $errors->first('district') || $errors->first('upazilla'))
-                <p class="help is-danger">Location imfo is not complete</p>
-                @endif
-            </div>
+
 
             <form action="{{route('apply')}}" method="POST">
                 @csrf
@@ -62,7 +59,7 @@
                         <div class="field">
                             <label class="label" for="division">Divison: </label>
                             <div class="control">
-                                <div class="select">
+                                <div class="select  @error('division') is-danger @enderror">
                                     <select name="division">
                                         <option>Select division</option>
                                         @foreach ($divisions as $key => $value)
@@ -79,7 +76,7 @@
                         <div class="field">
                             <label class="label" for="district">District: </label>
                             <div class="control">
-                                <div class="select">
+                                <div class="select  @error('district') is-danger @enderror">
                                     <select name="district">
                                         <option>Select district</option>
                                     </select>
@@ -93,7 +90,7 @@
                         <div class="field">
                             <label class="label" for="upazilla">Upazilla: </label>
                             <div class="control">
-                                <div class="select">
+                                <div class="select @error('upazilla') is-danger @enderror">
                                     <select name="upazilla">
                                         <option>Select upazilla</option>
                                     </select>
@@ -102,6 +99,11 @@
                         </div>
                     </div>
 
+                </div>
+                <div class="field">
+                    @if ($errors->first('division') || $errors->first('district') || $errors->first('upazilla'))
+                    <p class="help is-danger">Location info is incomplete</p>
+                    @endif
                 </div>
 
 
@@ -150,13 +152,19 @@
                     </div>
                 </div>
 
+                <div class="field">
+                    @if ($errors->first('contact') || $errors->first('fever') || $errors->first('cough'))
+                    <p class="help is-danger">Please select symptoms correctly</p>
+                    @endif
+                </div>
+
 
                 <div class="field is-grouped">
                     <div class="control">
-                        <button class="button is-link">Submit</button>
+                        <button type="submit" class="button is-link">Submit</button>
                     </div>
                     <div class="control">
-                        <button class="button is-link is-light">Cancel</button>
+                        <button type="reset" class="button is-link is-light">Cancel</button>
                     </div>
                 </div>
 

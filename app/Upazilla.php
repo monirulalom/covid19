@@ -15,4 +15,8 @@ class Upazilla extends Model
     function upazillas(){
         return $this->belongsToMany('\App\Application');
     }
+
+    public function applications(){
+        return $this->belongsToMany('App\Application','application_location');
+    }
 }
