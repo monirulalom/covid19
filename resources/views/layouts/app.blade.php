@@ -43,6 +43,9 @@
                         <a class="navbar-item {{request()->routeIs('apply')?'is-active':''}}" href="{{url('/apply')}}">
                             Apply for Test
                         </a>
+                        <a class="navbar-item"  href="{{url('/checkstatus')}}">
+                            Check Status
+                        </a>
                         <a class="navbar-item">
                             Awareness Quiz
                         </a>
