@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Division;
+use App\District;
+use App\Upazilla;
 
 class LocationSeeder extends Seeder
 {
@@ -23,7 +26,7 @@ class LocationSeeder extends Seeder
             array('id' => '8','name' => 'Mymensingh')
           );
        foreach($divisions as $division){
-            \App\Division::create($division);
+            Division::create($division);
         }
 
 
@@ -96,7 +99,7 @@ class LocationSeeder extends Seeder
 
 
           foreach($districts as $district){
-            \App\District::create($district);
+            District::create($district);
         }
 
         $upazillas = array(
@@ -594,7 +597,7 @@ class LocationSeeder extends Seeder
           );
 
           foreach($upazillas as $upazilla){
-            \App\Upazilla::create($upazilla);
+            Upazilla::create($upazilla);
         }
 
     }

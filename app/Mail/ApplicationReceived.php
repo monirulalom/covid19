@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use App\Application;
 
 class ApplicationReceived extends Mailable
 {
@@ -16,9 +17,10 @@ class ApplicationReceived extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $application;
+    public function __construct(Application $application)
     {
-        //
+       $this->application = $application ;
     }
 
     /**

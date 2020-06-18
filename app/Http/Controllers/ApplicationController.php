@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ApplicationReceived;
 use App\Application;
@@ -62,12 +63,15 @@ class ApplicationController extends Controller
         $application->contact = $request->contact;
         $application->fever = $request->fever;
         $application->cough = $request->cough;
+        $application->key = Str::random(6);
         
         $application->save();
 
+        $application->status()->attach('1');
+
         $application->division()->attach($request->division,['district_id' => $request->district, 'upazilla_id' => $request->upazilla]);
 
-        Mail::to($request->email)->send(new ApplicationReceived());
+        Mail::to($request->email)->send(new ApplicationReceived($application));
 
         return redirect('/apply')->with('status', 'Request Submitted');
 

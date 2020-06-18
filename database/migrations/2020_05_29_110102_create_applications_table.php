@@ -20,6 +20,7 @@ class CreateApplicationsTable extends Migration
             $table->string('contact');
             $table->string('fever');
             $table->string('cough');
+            $table->string('key');
             $table->timestamps();
 
         });

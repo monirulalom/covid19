@@ -21,4 +21,8 @@ class Application extends Model
         return $this->belongsToMany('\App\Upazilla','application_location');
     
     }
+    function status(){
+        return $this->belongsToMany('\App\Status','application_status');
+    
+    }
 }

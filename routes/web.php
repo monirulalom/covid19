@@ -24,7 +24,9 @@ Route::get('/admin', 'HomeController@index')->name('dashboard');
 
 Route::get('apply','ApplicationController@index')->name('apply');
 
-Route::get('checkstatus','StatuscheckController@index')->name('statuscheck');
+Route::get('check','StatuscheckController@index')->name('check');
+
+Route::post('check','StatuscheckController@show')->name('statuscheck');
 
 Route::post('apply','ApplicationController@store')->name('apply');
 
