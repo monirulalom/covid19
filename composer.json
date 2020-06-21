@@ -64,7 +64,8 @@
             "php artisan clear-compiled",
             "chmod -R 777 public/",
             "touch database/database.sqlite",
-            "php artisan migrate:fresh --seed"
+            "php artisan migrate:fresh",
+            "php artisan db:seed"
         ]       
     }
 }
