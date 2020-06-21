@@ -1,5 +1,24 @@
+dist: bionic
+language: php
+php:
+  - 7.2
+  - 7.3
+services:
+  - mysql
+cache:
+  directories:
+    - node_modules
+    - vendor
+before_script:
+  - cp .env.travis .env
+  - sudo mysql -e 'create database homestead;'
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+  - php artisan key:generate
+  - php artisan migrate
+script:
+  - vendor/bin/phpunit
 deploy:
   provider: heroku
   api_key: 2c2aec4d-4365-40be-9a43-d6ef689a9ba2
   app: gentle-escarpment-25919
-  run: "php artisan migrate"
