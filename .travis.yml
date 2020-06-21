@@ -14,7 +14,7 @@ before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
   - php artisan key:generate
-  - php artisan migrate
+  - php artisan migrate:fresh --seed
 script:
   - vendor/bin/phpunit
 deploy:
