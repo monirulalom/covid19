@@ -187,7 +187,7 @@
     $(document).ready(function () {
         $('select[name="division"]').on('change', function () {
             var districtId = $(this).val();
-            $('.dselect').show();
+            $('.dselect').css("visibility","visible");
             if (districtId) {
                 $.ajax({
                     url: 'getdistricts/' + districtId,
@@ -202,7 +202,7 @@
                         $.each(data, function (key, value) {
                             $('select[name="district"]').append('<option value="' + key + '">' + value + '</option>');
                         });
-                        $('.dselect').hide();
+                        $('.dselect').css("visibility","hidden");
                     }
                 });
             }
@@ -213,7 +213,8 @@
 
         $('select[name="district"]').on('change', function () {
             var districtId = $(this).val();
-            $('.uselect').show();
+            $('.uselect').css("visibility","visible");
+            
             if (districtId) {
                 $.ajax({
                     url: 'getupazillas/' + districtId,
@@ -226,7 +227,7 @@
                         $.each(data, function (key, value) {
                             $('select[name="upazilla"]').append('<option value="' + key + '">' + value + '</option>');
                         });
-                        $('.uselect').hide();
+                        $('.uselect').css("visibility","hidden");
                     }
                 });
             }

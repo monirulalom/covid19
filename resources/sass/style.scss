@@ -10,5 +10,5 @@ a.navbar-item.is-active:not(:focus):not(:hover), .navbar-link.is-active:not(:foc
 }
 
 .dselect, .uselect{
-    display: none;
+    visibility: hidden;
 }

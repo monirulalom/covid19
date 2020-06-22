@@ -18088,6 +18088,6 @@ a.navbar-item.is-active:not(:focus):not(:hover),
 
 .dselect,
 .uselect {
-  display: none;
+  visibility: hidden;
 }
 
