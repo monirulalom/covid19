@@ -18086,3 +18086,8 @@ a.navbar-item.is-active:not(:focus):not(:hover),
   margin-top: 15px;
 }
 
+.dselect,
+.uselect {
+  display: none;
+}
+

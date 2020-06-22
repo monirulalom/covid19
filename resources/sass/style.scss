@@ -8,3 +8,7 @@ a.navbar-item.is-active:not(:focus):not(:hover), .navbar-link.is-active:not(:foc
 .mt15{
     margin-top: 15px;
 }
+
+.dselect, .uselect{
+    display: none;
+}

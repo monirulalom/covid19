@@ -74,7 +74,7 @@
 
                     <div class="column">
                         <div class="field">
-                            <label class="label" for="district">District: </label>
+                            <label class="label" for="district">District: <i class="fas fa-spinner fa-spin dselect"></i> </label>
                             <div class="control">
                                 <div class="select  @error('district') is-danger @enderror">
                                     <select name="district">
@@ -88,7 +88,7 @@
 
                     <div class="column">
                         <div class="field">
-                            <label class="label" for="upazilla">Upazilla: </label>
+                            <label class="label" for="upazilla">Upazilla:  <i class="fas fa-spinner fa-spin uselect"></i>  </label>
                             <div class="control">
                                 <div class="select @error('upazilla') is-danger @enderror">
                                     <select name="upazilla">
@@ -187,6 +187,7 @@
     $(document).ready(function () {
         $('select[name="division"]').on('change', function () {
             var districtId = $(this).val();
+            $('.dselect').show();
             if (districtId) {
                 $.ajax({
                     url: 'getdistricts/' + districtId,
@@ -201,6 +202,7 @@
                         $.each(data, function (key, value) {
                             $('select[name="district"]').append('<option value="' + key + '">' + value + '</option>');
                         });
+                        $('.dselect').hide();
                     }
                 });
             }
@@ -211,6 +213,7 @@
 
         $('select[name="district"]').on('change', function () {
             var districtId = $(this).val();
+            $('.uselect').show();
             if (districtId) {
                 $.ajax({
                     url: 'getupazillas/' + districtId,
@@ -223,6 +226,7 @@
                         $.each(data, function (key, value) {
                             $('select[name="upazilla"]').append('<option value="' + key + '">' + value + '</option>');
                         });
+                        $('.uselect').hide();
                     }
                 });
             }
