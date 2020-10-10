@@ -21,6 +21,7 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/admin', 'HomeController@index')->name('dashboard');
+Route::get('/admin/new', 'HomeController@new')->name('dashboard');
 
 Route::get('apply','ApplicationController@index')->name('apply');
 

@@ -27,4 +27,10 @@ class HomeController extends Controller
         $reqs = Application::all();
         return view('dashboard',compact('reqs'));
     }
+    public function new()
+    {
+        $reqs = Application::orderBy('created_at')->limit(10)->get();
+        return view('dashboard',compact('reqs'));
+    }
+
 }

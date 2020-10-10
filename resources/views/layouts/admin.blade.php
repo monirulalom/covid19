@@ -74,8 +74,8 @@
                         Test Requests
                     </p>
                     <ul class="menu-list">
-                        <li><a class="is-active">All requests</a></li>
-                        <li><a>New</a></li>
+                        <li><a class="@if (\Request::is('admin')) is-active @endif" href="/admin">All requests</a></li>
+                        <li><a class="@if (\Request::is('admin/new')) is-active @endif" href="/admin/new">New</a></li>
                         <li><a>Sent to Lab</a></li>
                     </ul>
                     <p class="menu-label">
