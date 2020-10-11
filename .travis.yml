@@ -19,6 +19,6 @@ script:
   - vendor/bin/phpunit
 deploy:
   provider: heroku
-  api_key: 2c2aec4d-4365-40be-9a43-d6ef689a9ba2
+  api_key: ${{secrets.HEROKU_API_KEY}}
   app: projectcovid19
   on: develop
