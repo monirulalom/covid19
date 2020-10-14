@@ -32,6 +32,10 @@ Route::post('/admin/user/{id}', 'UserController@update');
 
 Route::get('apply','ApplicationController@index')->name('apply');
 
+Route::get('/admin/application/{id}','statusController@edit')->name('change-status');
+
+Route::post('/admin/application/{id}','statusController@update');
+
 Route::get('check','StatuscheckController@index')->name('check');
 
 Route::post('check','StatuscheckController@show')->name('statuscheck');

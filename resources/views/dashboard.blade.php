@@ -26,6 +26,7 @@
             <th>Contact</th>
             <th>Fever</th>
             <th>Cough</th>
+            <th>Manage</th>
         </thead>
         <tbody>
             @foreach ($reqs as $req)
@@ -37,6 +38,7 @@
                 <td>{{$req->contact}}</td>
                 <td>{{$req->fever}}</td>
                 <td>{{$req->cough}}</td>
+                <td><a href="{{Route('change-status',$req->id)}}" class="button is-link">Change status</a></td>
             </tr>
             @endforeach
         </tbody>
