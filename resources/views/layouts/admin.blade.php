@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,7 +48,11 @@
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link" href="{{route('dashboard')}}">{{ Auth::user()->name }}</a>
 
+
                         <div class="navbar-dropdown">
+                        @if(Auth::user()->hasRole('admin'))
+                        <a class="navbar-item" href="{{Route('users')}}">Manage users</a>
+                        @endif
                             <a class="navbar-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                 Logout
@@ -65,6 +68,8 @@
             </div>
         </div>
     </nav>
+
+    @if (Auth::user()->hasRole('admin'))
 
     <div class="section">
         <div class="columns">
@@ -91,6 +96,11 @@
             @yield('content')
 
         </div>
+        @else
+        <div class="section">
+        <h2 class="title is-3">You don't have permission to view the page</h2>
+        </div>
+    @endif
     </div>
 
     </div>
