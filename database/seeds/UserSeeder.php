@@ -31,6 +31,22 @@ class UserSeeder extends Seeder
                 'remember_token' => Str::random(10),
 
             ],
+            [
+                'name' => 'Mr. Doctor',
+                'email' => 'doctor@example.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('12345678'), // password
+                'remember_token' => Str::random(10),
+
+            ],
+            [
+                'name' => 'Govt Admin',
+                'email' => 'govadmin@example.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('12345678'), // password
+                'remember_token' => Str::random(10),
+
+            ],
 
         ];
 
