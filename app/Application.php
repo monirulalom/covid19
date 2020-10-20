@@ -3,11 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use HasFactory;
 
 class Application extends Model
 {
     //
     protected $guarded= [];
+ 
 
     function division(){
         return $this->belongsToMany('\App\Division','application_location');

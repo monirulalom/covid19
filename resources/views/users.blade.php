@@ -19,6 +19,7 @@
 
     <table class="table is-fullwidth is-bordered is-hoverable">
         <thead>
+            <th>Id</th>
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
@@ -29,6 +30,7 @@
             <tr>
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
                 <td>{{ $user->roles()->pluck('name')->implode(', ')}}</td>
                 <td> <a href="/admin/user/{{$user->id}}" class="button is-link">Edit user</a> </td>
             </tr>
