@@ -47,7 +47,7 @@ class ApplicationController extends Controller
 
         $validatedData = $request->validate([
             'name' => 'required|min:3',
-            'email' => 'required|email|unique',
+            'email' => 'required|email|unique:applications',
             'division' => 'required|integer',
             'district' => 'required|integer',
             'upazilla' => 'required|integer',
