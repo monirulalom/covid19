@@ -12,7 +12,7 @@ before_script:
   - cp .env.travis .env
   - touch database/database.sqlite
   - composer self-update
-  - composer install --prefer-source --no-interaction --dev
+  - composer install --no-interaction
   - php artisan key:generate
   - composer dump-autoload
   - php artisan migrate:fresh
