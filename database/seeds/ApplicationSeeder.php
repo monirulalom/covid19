@@ -6,7 +6,6 @@ use App\Division;
 use App\District;
 use App\Upazilla;
 use Illuminate\Support\Str;
-use Faker\Generator as Faker;
 
 class ApplicationSeeder extends Seeder
 {
@@ -19,7 +18,7 @@ class ApplicationSeeder extends Seeder
     {
         for($i=0;$i<50;$i++){
 
-            $faker = \Faker\Factory::create();
+            $faker = \Faker\Generator\Factory::create();
 
             $name = $faker->name;
             $email =$faker->safeEmail;
