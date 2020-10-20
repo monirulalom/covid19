@@ -45,3 +45,4 @@ Route::post('apply','ApplicationController@store')->name('apply');
 Route::get('getdistricts/{id}','ApplicationController@getDistricts');
 
 Route::get('getupazillas/{id}','ApplicationController@getUpazillas');
+
