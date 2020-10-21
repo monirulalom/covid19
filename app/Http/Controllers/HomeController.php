@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\Application;
 
 class HomeController extends Controller
@@ -24,12 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $reqs = Application::all();
+        $reqs = Application::paginate(15);
         return view('dashboard',compact('reqs'));
     }
     public function new()
     {
-        $reqs = Application::orderBy('created_at')->limit(10)->get();
+        $reqs = Application::whereHas(
+            'status', function($q){
+                $q->where('id', '1');
+            }
+        )->whereDate( 'created_at', '<=', Carbon::now()->addDays( 2 ) )->paginate();
         return view('dashboard',compact('reqs'));
     }
 

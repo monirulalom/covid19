@@ -43,5 +43,6 @@
             @endforeach
         </tbody>
     </table>
+    {{ $reqs->links() }}
 </main>
 @endsection
