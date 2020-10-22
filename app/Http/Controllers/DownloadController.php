@@ -29,7 +29,7 @@ class DownloadController extends Controller
             foreach ($applications as $application) {
                 $row['id']  = $application->id;
                 $row['name']    = $application->name;
-                $row['contact']    = $application->conatct;
+                $row['contact']    = $application->contact;
                 $row['fever']    = $application->fever;
                 $row['cough']    = $application->cough;
                 $row['division']    = $application->division->first()->name;
@@ -38,6 +38,7 @@ class DownloadController extends Controller
                 $row['status']    = $application->status->first()->description;
                 $row['created_at']  = $application->created_at;
                 $row['updated_at']  = $application->updated_at;
+
 
                 fputcsv($file, array($row['id'], $row['name'], $row['contact'], $row['fever'],$row['cough'],$row['division'],$row['district'],$row['upazilla'],$row['status'], $row['created_at'],$row['updated_at']));
             }
