@@ -46,3 +46,5 @@ Route::get('getdistricts/{id}','ApplicationController@getDistricts');
 
 Route::get('getupazillas/{id}','ApplicationController@getUpazillas');
 
+Route::get('/admin/download/applications','DownloadController@all')->name('downloadapplications');
+

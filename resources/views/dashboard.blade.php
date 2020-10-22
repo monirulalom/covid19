@@ -9,6 +9,11 @@
             </div>
         </div>
         <div class="level-right">
+        <div class="level-item">
+        <button type="button" class="button is-small">
+                    <a href="{{Route('downloadapplications')}}">Download all applications</a>
+                </button>
+        </div>
             <div class="level-item">
                 <button type="button" class="button is-small">
                     {{Carbon\Carbon::now()->isoFormat('DD MMMM YYYY')}}
