@@ -20,7 +20,7 @@ class DownloadController extends Controller
             "Expires"             => "0"
         );
 
-        $columns = array('id', 'name', 'fever', 'created_at');
+        $columns = array('id', 'name', 'contact','fever','cough','division','district','upazilla','status','created_at','updated_at');
 
         $callback = function() use($applications, $columns) {
             $file = fopen('php://output', 'w');
