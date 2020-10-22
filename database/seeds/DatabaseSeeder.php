@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             StatusSeeder::class,
             UserSeeder::class,
             RoleSeeder::class,
-            ApplicationSeeder::class
+            ApplicationSeeder::class,
+            HospitalSeeder::class
         ]);
     }
 }

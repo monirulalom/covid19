@@ -30,6 +30,18 @@ Route::get('/admin/user/{id}', 'UserController@edit')->name('edit-user');
 
 Route::post('/admin/user/{id}', 'UserController@update');
 
+Route::get('/admin/hospitals', 'HospitalController@index')->name('hospitals');
+
+Route::get('/admin/hospitals/add', 'HospitalController@add')->name('addhospital');
+
+Route::get('/admin/hospital/{id}', 'HospitalController@edit')->name('edithospital');
+
+Route::post('/admin/hospital/{id}', 'HospitalController@update');
+
+Route::get('/admin/hospital/delete/{id}', 'HospitalController@delete')->name('deletehospital');
+
+Route::post('/admin/hospitals/add', 'HospitalController@store');
+
 Route::get('apply','ApplicationController@index')->name('apply');
 
 Route::get('/admin/application/{id}','statusController@edit')->name('change-status');
