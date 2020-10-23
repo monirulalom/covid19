@@ -7,11 +7,26 @@
             <div class="level-item">
                 <div class="title">Dashboard</div>
             </div>
+            <div class="level-item">
+            <a class="button is-small @if (\Request::is('admin/new')) is-link  @endif" href="/admin/new">New</a>
+            </div>
+            <div class="level-item">
+            <a class="button is-small @if (\Request::is('admin/tolab')) is-link  @endif" href="/admin/tolab">To lab</a>
+            </div>
+            <div class="level-item">
+            <a class="button is-small @if (\Request::is('admin/inlab')) is-link  @endif" href="/admin/inlab">In Lab</a>
+            </div>
+            <div class="level-item">
+            <a class="button is-small @if (\Request::is('admin/positive')) is-link  @endif" href="/admin/positive">Positive</a>
+            </div>
+            <div class="level-item">
+            <a class="button is-small @if (\Request::is('admin/negative')) is-link  @endif" href="/admin/negative">Negative</a>
+            </div>
         </div>
         <div class="level-right">
         <div class="level-item">
         <button type="button" class="button is-small">
-                    <a href="{{Route('downloadapplications')}}">Download all applications</a>
+                    <a href="{{Route('downloadapplications')}}">Download</a>
                 </button>
         </div>
             <div class="level-item">

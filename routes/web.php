@@ -24,6 +24,15 @@ Route::get('/admin', 'HomeController@index')->name('dashboard');
 
 Route::get('/admin/new', 'HomeController@new')->name('new-req');
 
+Route::get('/admin/tolab', 'HomeController@tolab')->name('tolab');
+
+Route::get('/admin/inlab', 'HomeController@inlab')->name('inlab');
+
+Route::get('/admin/positive', 'HomeController@positive')->name('positive');
+
+Route::get('/admin/negative', 'HomeController@negative')->name('negative');
+
+
 Route::get('/admin/users', 'UserController@index')->name('users');
 
 Route::get('/admin/user/{id}', 'UserController@edit')->name('edit-user');

@@ -38,4 +38,44 @@ class HomeController extends Controller
         return view('dashboard',compact('reqs'));
     }
 
+    public function tolab()
+    {
+        $reqs = Application::whereHas(
+            'status', function($q){
+                $q->where('id', '2');
+            }
+        )->paginate();
+        return view('dashboard',compact('reqs'));
+    }
+    public function inlab()
+    {
+        $reqs = Application::whereHas(
+            'status', function($q){
+                $q->where('id', '3');
+            }
+        )->paginate();
+        return view('dashboard',compact('reqs'));
+    }
+
+    public function positive()
+    {
+        $reqs = Application::whereHas(
+            'status', function($q){
+                $q->where('id', '4');
+            }
+        )->paginate();
+        return view('dashboard',compact('reqs'));
+    }
+    public function negative()
+    {
+        $reqs = Application::whereHas(
+            'status', function($q){
+                $q->where('id', '5');
+            }
+        )->paginate();
+        return view('dashboard',compact('reqs'));
+    }
+
+
+
 }
