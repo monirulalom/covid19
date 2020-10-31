@@ -32,6 +32,22 @@ Route::get('/admin/positive', 'HomeController@positive')->name('positive');
 
 Route::get('/admin/negative', 'HomeController@negative')->name('negative');
 
+Route::get('/admin/zone','ZoneController@index')->name('zone');
+
+Route::get('/admin/zone/new','ZoneController@new')->name('addzone');
+
+Route::post('/admin/zone/new','ZoneController@add');
+
+Route::get('/admin/zone/green','ZoneController@green')->name('green');
+
+Route::get('/admin/zone/delete/{id}','ZoneController@delete')->name('deletezone');
+
+Route::get('/admin/zone/yellow','ZoneController@yellow')->name('yellow');
+
+Route::get('/admin/zone/red','ZoneController@red')->name('red');
+
+Route::get('/admin/zone/lockdown','ZoneController@lockdown')->name('lockdown');
+
 
 Route::get('/admin/users', 'UserController@index')->name('users');
 

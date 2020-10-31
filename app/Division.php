@@ -17,6 +17,12 @@ class Division extends Model
     public function applications(){
         return $this->belongsToMany('App\Application','application_location');
     }
+    function area(){
+        return $this->belongsToMany(
+            'App\Area','areas'
+        );
+    
+    }
 
 }
 

@@ -53,6 +53,7 @@
                         @if(Auth::user()->hasRole('admin'))
                         <a class="navbar-item" href="{{Route('users')}}">Manage users</a>
                         <a class="navbar-item" href="{{Route('hospitals')}}">Manage hospitals</a>
+                        <a class="navbar-item" href="{{Route('zone')}}">Manage Affected Area</a>
                         @endif
                             <a class="navbar-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();document.getElementById('logout-form').submit();">

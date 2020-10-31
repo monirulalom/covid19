@@ -54,7 +54,10 @@
                     <p class="help is-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                <div class="columns">
+                
+                <div class="field">
+                 
+                    <div class="columns">
                     <div class="column">
                         <div class="field">
                             <label class="label" for="division">Divison: </label>
@@ -100,9 +103,8 @@
                     </div>
 
                 </div>
-                <div class="field">
-                    @if ($errors->first('division') || $errors->first('district') || $errors->first('upazilla'))
-                    <p class="help is-danger">Location info is incomplete</p>
+                @if ($errors->first('division') || $errors->first('district') || $errors->first('upazilla'))
+                <p class="help is-danger">Location info is incomplete</p>
                     @endif
                 </div>
 

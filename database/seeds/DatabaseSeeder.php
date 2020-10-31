@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             RoleSeeder::class,
             ApplicationSeeder::class,
-            HospitalSeeder::class
+            HospitalSeeder::class,
+            ZoneSeeder::class
         ]);
     }
 }
