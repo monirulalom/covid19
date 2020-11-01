@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon; 
 Use App\Application;
 use App\Division;
 use App\District;
@@ -38,6 +39,10 @@ class ApplicationSeeder extends Seeder
             $application->fever = $fever;
             $application->cough = $cough;
             $application->key = Str::random(6);
+
+            $application->created_at = Carbon::now()->subDays(rand(0, 10));
+
+            $application->updated_at = $application->created_at;
 
             $application->save();
 

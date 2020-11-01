@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 //URL::forceScheme('https');
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/','IndexController@index')->name('index');
 Auth::routes(['verify' => true]);
 
 
