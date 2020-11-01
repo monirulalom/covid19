@@ -76,7 +76,7 @@
                     </div>
                     <div class="column">
                         <div class="field">
-                            <label class="label" for="zone">Zone:  <i class="fas fa-spinner fa-spin"></i>  </label>
+                            <label class="label" for="zone">Zone:</label>
                             <div class="control">
                                 <div class="select @error('zone') is-danger @enderror">
                                     <select name="zone">
@@ -102,9 +102,7 @@
 
 
                 <div class="field is-horizontal">
-                    <div class="field-label"></div>
-
-                    <div class="field-body">
+                                    <div class="field-body">
                         <div class="field is-grouped">
                             <div class="control">
                                 <button type="submit" class="button is-primary">Add</button>
