@@ -18263,10 +18263,6 @@ a.navbar-item.is-active:not(:focus):not(:hover),
   margin-bottom: 60px;
 }
 
-#myths .myth .the_answer a:hover {
-  color: #fff;
-}
-
 #myths .myth .the_answer h2 {
   text-transform: uppercase;
   font-size: 36px;
