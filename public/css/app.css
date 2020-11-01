@@ -18091,3 +18091,247 @@ a.navbar-item.is-active:not(:focus):not(:hover),
   visibility: hidden;
 }
 
+/* progress meter */
+
+#progress_meter {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  display: block;
+}
+
+#progress_meter span {
+  display: inline-block;
+  border-radius: 50%;
+  background: #bcbce2;
+  width: 30px;
+  height: 30px;
+  line-height: 1.8;
+  color: #222242;
+  transition: all 500ms;
+}
+
+#progress_meter span.selected {
+  background: #fff;
+  color: #303044;
+  transition: all 500ms;
+}
+
+#progress_meter span.right_answer {
+  background: #009245;
+  color: #fff;
+  transition: all 500ms;
+}
+
+#progress_meter span.wrong_answer {
+  background: #c1272d;
+  color: #fff;
+  transition: all 500ms;
+}
+
+/* login section */
+
+#login {
+  padding: 40px 0;
+  display: block;
+}
+
+#login .login_heading {
+  text-align: center;
+  margin-top: 60px;
+}
+
+#login .login_heading object {
+  width: 600px;
+}
+
+#login #login_form {
+  text-align: center;
+  padding-top: 40px;
+}
+
+#login #login_form input {
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px;
+  display: inline-block;
+  width: 300px;
+  font-size: 21px;
+  margin-bottom: 5px;
+  color: #222242;
+}
+
+#login #login_form input:focus {
+  outline: none;
+}
+
+#login button {
+  font-size: 26px;
+  color: #fff;
+  background: #222242;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+  outline: none;
+  transition: all 500ms;
+}
+
+#login button:hover {
+  background: #302f2f;
+}
+
+#login button span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+/* myths section */
+
+#myths {
+  display: block;
+  padding: 40px 0 0 0;
+}
+
+#myths .ns {
+  display: none;
+}
+
+#myths .myth {
+  text-align: center;
+  margin-bottom: 60px;
+  display: none;
+}
+
+/* #myths .myth .right_or_wrong {} */
+
+#myths .myth .right_or_wrong a.right_button:link,
+#myths .myth .right_or_wrong a.right_button:visited {
+  font-size: 21px;
+  color: #fff;
+  border: 2px solid #009245;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  transition: all 500ms;
+  background: #009245;
+}
+
+#myths .myth .right_or_wrong a.right_button:hover {
+  background: none;
+  color: #009245;
+}
+
+#myths .myth .right_or_wrong a.wrong_button:link,
+#myths .myth .right_or_wrong a.wrong_button:visited {
+  font-size: 21px;
+  color: #fff;
+  border: 2px solid #c1272d;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  transition: all 500ms;
+  background: #c1272d;
+}
+
+#myths .myth .right_or_wrong a.wrong_button:hover {
+  background: none;
+  color: #c1272d;
+}
+
+#myths .myth .right_or_wrong span {
+  display: inline-block;
+  font-size: 24px;
+  padding: 0 15px;
+}
+
+#myths .myth .right_or_wrong .the_myth {
+  font-size: 40px;
+  margin: 0 0 0.8em 0;
+  font-weight: bold;
+}
+
+#myths .myth .the_answer {
+  display: none;
+}
+
+#myths .myth .the_answer p {
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+
+#myths .myth .the_answer a:hover {
+  color: #fff;
+}
+
+#myths .myth .the_answer h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+/* #myths .myth .the_answer h2 strong {} */
+
+#myths .myth .the_answer h2.right_answer strong {
+  background: #009245;
+  color: #fff;
+  padding: 3px 7px;
+}
+
+#myths .myth .the_answer h2.wrong_answer strong {
+  background: #c1272d;
+  color: #fff;
+  padding: 3px 7px;
+}
+
+#myths .next_question {
+  font-size: 26px;
+  color: #fff;
+  background: #222242;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  outline: none;
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+#myths .next_question:hover {
+  background: #302f2f;
+}
+
+/* result */
+
+#result {
+  padding: 80px 0;
+  text-align: center;
+  display: none;
+}
+
+#result h2 {
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  display: none;
+  font-weight: bold;
+}
+
+/* #result h2 span {} */
+
+#result h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+/* #result h3.rank span {} */
+
+#result h3.rank {
+  margin-bottom: 30px;
+}
+

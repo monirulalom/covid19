@@ -20,6 +20,9 @@ Route::get('/', function () {
 });
 Auth::routes(['verify' => true]);
 
+
+Route::get('/quiz', 'QuizController@index')->name('quiz');
+
 Route::get('/admin', 'HomeController@index')->name('dashboard');
 
 Route::get('/admin/new', 'HomeController@new')->name('new-req');

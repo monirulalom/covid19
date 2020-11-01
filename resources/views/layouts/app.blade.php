@@ -46,7 +46,7 @@
                         <a class="navbar-item"  href="{{url('/check')}}">
                             Check Status
                         </a>
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="{{Route('quiz')}}">
                             Awareness Quiz
                         </a>
 
