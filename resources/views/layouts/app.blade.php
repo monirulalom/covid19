@@ -57,14 +57,14 @@
 
                             <div class="navbar-dropdown">
                                 <a class="navbar-item">
-                                    About
+                                    Get Alerts
                                 </a>
                                 <a class="navbar-item">
-                                    Contact
+                                    Volunteer
                                 </a>
                                 <hr class="navbar-divider">
                                 <a class="navbar-item">
-                                    Report an issue
+                                    Important information
                                 </a>
                             </div>
                         </div>

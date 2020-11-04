@@ -45,6 +45,9 @@
                 <div class="navbar-start"></div>
 
                 <div class="navbar-end">
+                <div class="navbar-item">
+                    <a href="#"><i class="fa far fa-bell"></i></a>
+                </div>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link" href="{{route('dashboard')}}">{{ Auth::user()->name }}</a>
 
@@ -83,7 +86,16 @@
                     <ul class="menu-list">
                         <li><a class="@if (\Request::is('admin')) is-active @endif" href="/admin">All requests</a></li>
                         <li><a class="@if (\Request::is('admin/new')) is-active @endif" href="/admin/new">New</a></li>
-                        <li><a>Sent to Lab</a></li>
+                        <li><a class="@if (\Request::is('admin/positive')) is-active  @endif" href="/admin/positive">Positive</a></li>
+                        <li><a class="@if (\Request::is('admin/negative')) is-active  @endif" href="/admin/negative">Negative</a></li>
+                    </ul>
+                    <p class="menu-label">
+                       Affected Area
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="{{Route('zone')}}">All marked area</a></li>
+                        <li><a href="{{Route('red')}}">Red Zone</a></li>
+                        <li><a  href="{{Route('lockdown')}}">Lockdown</a></li>
                     </ul>
                     <p class="menu-label">
                        Treatment
@@ -92,6 +104,13 @@
                         <li><a>In hospital</a></li>
                         <li><a>In home quarentine</a></li>
                         <li><a>Recovered</a></li>
+                    </ul>
+                    <p class="menu-label">
+                       Admin section
+                    </p>
+                    <ul class="menu-list">
+                        <li><a  href="{{Route('users')}}">Manage users</a></li>
+                        <li><a href="{{Route('hospitals')}}">Manage Hospitals</a></li>
                     </ul>
                 </nav>
             </aside>

@@ -5,7 +5,7 @@
     <div class="level">
         <div class="level-left">
             <div class="level-item">
-                <div class="title">Dashboard</div>
+                <div class="title">Users</div>
             </div>
         </div>
         <div class="level-right">

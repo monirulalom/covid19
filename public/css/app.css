@@ -18091,6 +18091,11 @@ a.navbar-item.is-active:not(:focus):not(:hover),
   visibility: hidden;
 }
 
+.box .heading,
+.box .title {
+  text-align: center;
+}
+
 /* progress meter */
 
 #progress_meter {
