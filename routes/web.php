@@ -86,3 +86,15 @@ Route::get('getupazillas/{id}','ApplicationController@getUpazillas');
 
 Route::get('/admin/download/applications','DownloadController@all')->name('downloadapplications');
 
+Route::get('/alert','AlertController@index')->name('alert');
+
+Route::post('/alert','AlertController@store');
+
+Route::get('admin/alerts','AlertController@list')->name('alerts');
+
+Route::get('admin/addalert','AlertController@add')->name('addalert');
+
+Route::post('admin/addalert','AlertController@save');
+
+Route::get('admin/subscribers','AlertController@sublist')->name('subscribers');
+

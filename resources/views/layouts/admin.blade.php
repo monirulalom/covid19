@@ -46,7 +46,7 @@
 
                 <div class="navbar-end">
                 <div class="navbar-item">
-                    <a href="#"><i class="fa far fa-bell"></i></a>
+                    <a href="{{Route('alerts')}}"><i class="fa far fa-bell"></i></a>
                 </div>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link" href="{{route('dashboard')}}">{{ Auth::user()->name }}</a>
@@ -57,6 +57,7 @@
                         <a class="navbar-item" href="{{Route('users')}}">Manage users</a>
                         <a class="navbar-item" href="{{Route('hospitals')}}">Manage hospitals</a>
                         <a class="navbar-item" href="{{Route('zone')}}">Manage Affected Area</a>
+                        <a class="navbar-item" href="{{Route('alerts')}}">Manage Alerts</a>
                         @endif
                             <a class="navbar-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();document.getElementById('logout-form').submit();">

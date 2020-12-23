@@ -56,15 +56,11 @@
                             </a>
 
                             <div class="navbar-dropdown">
-                                <a class="navbar-item">
+                                <a class="navbar-item" href="{{Route('alert')}}">
                                     Get Alerts
                                 </a>
                                 <a class="navbar-item">
-                                    Volunteer
-                                </a>
-                                <hr class="navbar-divider">
-                                <a class="navbar-item">
-                                    Important information
+                                    Vaccine Trial Registration
                                 </a>
                             </div>
                         </div>
@@ -95,6 +91,7 @@
                                         <a class="navbar-item" href="{{Route('users')}}">Manage users</a>
                                         <a class="navbar-item" href="{{Route('hospitals')}}">Manage hospitals</a>
                                         <a class="navbar-item" href="{{Route('zone')}}">Manage Affected Area</a>
+                                        <a class="navbar-item" href="{{Route('alerts')}}">Manage Alerts</a>
                                     @endif
                                         <a class="navbar-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">
