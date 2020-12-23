@@ -59,7 +59,7 @@
                                 <a class="navbar-item" href="{{Route('alert')}}">
                                     Get Alerts
                                 </a>
-                                <a class="navbar-item">
+                                <a class="navbar-item" href="{{Route('trial')}}">
                                     Vaccine Trial Registration
                                 </a>
                             </div>

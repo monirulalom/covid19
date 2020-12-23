@@ -98,3 +98,26 @@ Route::post('admin/addalert','AlertController@save');
 
 Route::get('admin/subscribers','AlertController@sublist')->name('subscribers');
 
+Route::get('trial','TrialController@showform')->name('trial');
+
+Route::post('trial','TrialController@store')->name('trial');
+
+Route::get('admin/volunteers','TrialController@list')->name('volunteers');
+
+Route::get('admin/treat/{id}','PatientController@treat')->name('treat');
+
+Route::get('admin/quarentine/{id}','PatientController@quarentine')->name('quarentine');
+
+Route::get('admin/patients','PatientController@list')->name('patients');
+
+Route::get('admin/inhospital','PatientController@inhospital')->name('inhospital');
+
+Route::get('admin/inquarentine','PatientController@pquarentine')->name('pquarentine');
+
+Route::get('admin/recovered','PatientController@recovered')->name('recovered');
+
+Route::get('admin/dead','PatientController@dead')->name('dead');
+
+Route::get('admin/patinent/{id}','PatientController@edit')->name('editpatient');
+Route::post('admin/patinent/{id}','PatientController@update');
+

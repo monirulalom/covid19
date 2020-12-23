@@ -42,9 +42,21 @@
                     </div>
                     
                     <input class="button is-primary" type="submit" value="Save">
+
+                   
                     </form>
                     </td>
                 </tr>
+                @if($application->status->first()->id == 4)
+                    <tr>
+                    <td colspan="2">
+                    <a class="button is-small" href="{{Route('treat',$application->id)}}">Send for treatment</a>
+
+<a class="button is-small" href="{{Route('quarentine',$application->id)}}"">quarentine</a>
+                    </td>
+                    
+@endif
+                    </tr>
             </tbody>
         </table>
         @else

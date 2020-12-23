@@ -102,9 +102,16 @@
                        Treatment
                     </p>
                     <ul class="menu-list">
-                        <li><a>In hospital</a></li>
-                        <li><a>In home quarentine</a></li>
-                        <li><a>Recovered</a></li>
+                        <li><a href="{{Route('patients')}}">All</a></li>
+                        <li><a href="{{Route('inhospital')}}">In hospital</a></li>
+                        <li><a href="{{Route('pquarentine')}}">In quarentine</a></li>
+                        <li href="{{Route('recovered')}}"><a>Recovered</a></li>
+                    </ul>
+                    <p class="menu-label">
+                       Vaccine
+                    </p>
+                    <ul class="menu-list">
+                        <li><a  href="{{Route('volunteers')}}">Volunteers</a></li>
                     </ul>
                     <p class="menu-label">
                        Admin section
