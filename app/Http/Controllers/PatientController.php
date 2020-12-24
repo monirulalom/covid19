@@ -28,7 +28,7 @@ class PatientController extends Controller
         $patient->name = $application->name;
         $patient->email = $application->email;
         $patient->address = $application->district->first()->name;
-        $patient->status = "In hospital";
+        $patient->status = "In quarentine";
         $patient->save();
         return redirect('admin/patients');
     }
