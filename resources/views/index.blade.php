@@ -33,6 +33,8 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="columns is-multiline">
             <div class="column">
               <div class="box notification">
                 <div class="heading">Total Positive</div>
@@ -53,7 +55,7 @@
                   <div class="level-item">
                     <div class="">
                       <div class="heading">Up / Down</div>
-                      <div class="title is-5">0</div>
+                      <div class="title is-5">{{$positive_increase}}@if($positive_up) ↑ @else ↓ @endif</div>
                     </div>
                   </div>
                 </div>
@@ -62,24 +64,51 @@
             <div class="column">
               <div class="box notification">
                 <div class="heading">Toal Death</div>
-                <div class="title">0</div>
+                <div class="title">{{$dead_total}}</div>
                 <div class="level">
                   <div class="level-item">
                     <div class="">
                       <div class="heading">Today</div>
-                      <div class="title is-5">0</div>
+                      <div class="title is-5">{{$dead_today}}</div>
                     </div>
                   </div>
                   <div class="level-item">
                     <div class="">
                       <div class="heading">Yesterday</div>
-                      <div class="title is-5">0</div>
+                      <div class="title is-5">{{$dead_yesterday}}</div>
                     </div>
                   </div>
                   <div class="level-item">
                     <div class="">
                       <div class="heading">Up / Down</div>
-                      <div class="title is-5">0</div>
+                      <div class="title is-5">{{$dead_increase}}@if($dead_up) ↑ @else ↓ @endif</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="box notification">
+                <div class="heading">Toal Recovered</div>
+                <div class="title">{{$recovered_total}}</div>
+                <div class="level">
+                  <div class="level-item">
+                    <div class="">
+                      <div class="heading">Today</div>
+                      <div class="title is-5">{{$recovered_today}}</div>
+                    </div>
+                  </div>
+                  <div class="level-item">
+                    <div class="">
+                      <div class="heading">Yesterday</div>
+                      <div class="title is-5">{{$recovered_yesterday}}</div>
+                    </div>
+                  </div>
+                  <div class="level-item">
+                    <div class="">
+                      <div class="heading">Up / Down</div>
+                      <div class="title is-5">{{$recovered_increase}}@if($recovered_up) ↑ @else ↓ @endif</div>
                     </div>
                   </div>
                 </div>

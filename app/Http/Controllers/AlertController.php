@@ -56,7 +56,7 @@ class AlertController extends Controller
             Mail::to($sub->email)->send(new CovidUpdate($alert));
         }
 
-        return redirect('/apply')->with('status', 'Request Submitted');
+        return redirect('/admin/alerts')->with('status', 'Request Submitted');
     }
 
     function sublist(){

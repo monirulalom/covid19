@@ -75,7 +75,7 @@
         </div>
     </nav>
 
-    @if (Auth::user()->hasRole('admin'))
+    @if (Auth::user()->hasRole('admin') or Auth::user()->hasRole('medical') )
 
     <div class="section">
         <div class="columns">
